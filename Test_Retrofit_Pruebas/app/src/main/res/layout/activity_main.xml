@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/popular_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener Películas Populares"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar Películas"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/details_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener Detalles de Película"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/recommendations_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener Películas Recomendadas"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/genres_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener Géneros de Películas"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/movies_by_genre_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener Películas por Género"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/movies_by_date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener Películas por Fecha"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/movies_by_rating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obtener Películas por Puntaje"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>
