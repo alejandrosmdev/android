@@ -3,19 +3,10 @@ package com.example.test_retrofit;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.test_retrofit.json_mapper.Movie;
-import com.example.test_retrofit.json_mapper.MovieResponse;
-import com.example.test_retrofit.retrofit.RetrofitClient;
 import com.example.test_retrofit.services.ServicePantallaPrincipal;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnMostrarPeliculas;
