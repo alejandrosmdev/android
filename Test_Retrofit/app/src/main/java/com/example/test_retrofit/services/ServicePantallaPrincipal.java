@@ -5,6 +5,7 @@ import android.widget.Toast;
 import com.example.test_retrofit.MainActivity;
 import com.example.test_retrofit.json_mapper.Movie;
 import com.example.test_retrofit.json_mapper.MovieResponse;
+import com.example.test_retrofit.listeners.MoviesAPI;
 import com.example.test_retrofit.retrofit.RetrofitClient;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class ServicePantallaPrincipal {
     }
 
     public void getPopularMovies() {
-        Call<MovieResponse> call = RetrofitClient.getInstance().getPopularMovies("da801cba97030b2061f98438076b37f6","es-ES", 1);
+        Call<MovieResponse> call = RetrofitClient.getInstance().getPopularMovies(MoviesAPI.apiKey,"es-ES", 1);
         call.enqueue(new Callback<MovieResponse>() {
             @Override
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
@@ -45,7 +46,7 @@ public class ServicePantallaPrincipal {
     }
 
     public void getSearchedMovie() {
-        Call<MovieResponse> call = RetrofitClient.getInstance().getSearchedMovie("da801cba97030b2061f98438076b37f6","es-ES","titanic",1);
+        Call<MovieResponse> call = RetrofitClient.getInstance().getSearchedMovie(MoviesAPI.apiKey,"es-ES","titanic",1);
         call.enqueue(new Callback<MovieResponse>() {
             @Override
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
@@ -68,7 +69,7 @@ public class ServicePantallaPrincipal {
     }
 
     public void getMovieDetailsById() {
-        Call<Movie> call = RetrofitClient.getInstance().getMovieDetails(550, "da801cba97030b2061f98438076b37f6", "es-ES");
+        Call<Movie> call = RetrofitClient.getInstance().getMovieDetails(550, MoviesAPI.apiKey, "es-ES");
         call.enqueue(new Callback<Movie>() {
             @Override
             public void onResponse(Call<Movie> call, Response<Movie> response) {
