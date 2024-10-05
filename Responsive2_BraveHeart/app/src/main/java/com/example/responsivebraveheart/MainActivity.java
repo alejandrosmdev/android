@@ -1,6 +1,9 @@
 package com.example.responsivebraveheart;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,16 +12,34 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-
+    // Elementos de pantalla
+    private Button miBotonA;
+    private Button miBotonB;
+    private Button miBotonC;
+    private Button miBotonD;
+    private Button miBotonE;
+    private Button miBotonF;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        //Inicializar componentes
+        inicializarComponentes();
+        // Fin
+        miBotonA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Boton A", Toast.LENGTH_SHORT).show();
+            }
         });
+    }
+    private void inicializarComponentes(){
+        miBotonA = findViewById(R.id.btnA);
+        miBotonB = findViewById(R.id.btnB);
+        miBotonC = findViewById(R.id.btnC);
+        miBotonD = findViewById(R.id.btnD);
+        miBotonE = findViewById(R.id.btnE);
+        miBotonF = findViewById(R.id.btnF);
     }
 }
